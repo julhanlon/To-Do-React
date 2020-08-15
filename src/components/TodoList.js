@@ -6,7 +6,7 @@ const TodoList = () => {
   const [state, dispatch] = useTodoContext();
   return (
     <div>
-      <h4>The list: </h4>
+      <h4 className = "ml-4">The list: </h4>
       <ul className="list-group">
         {state.map((item, index) => (
           <li className="list-group-item" key={index}>
