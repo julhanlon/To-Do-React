@@ -29,6 +29,13 @@ function reducer(state, action) {
         }
         return item;
       });
+      case "completed":
+        return state.map((item, index) => {
+          if (index === action.index) {
+            return { ...item, completed: !item.completed };
+          }
+          return item;
+        });
     default:
       return state;
   }

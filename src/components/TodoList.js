@@ -11,9 +11,12 @@ const TodoList = () => {
         {state.map((item, index) => (
           <li className="list-group-item" key={index}>
             <button onClick = {() => dispatch({type: "prioritize", index})} className="btn btn-warning mr-4"> Prioritize</button>
+            <button onClick = {() => dispatch({type: "completed", index})} className="btn btn-success mr-4">Completed</button>
             <button onClick = {() => dispatch({type: "remove", index})} className="btn btn-danger mr-4"> Delete</button>
 
-        <span className={ item.priority ? "font-weight-bold" : ""}>{item.name}</span>
+            <span className={item.priority ? "font-weight-bold" : ""}>
+              {item.completed ? <del> {item.name}</del> : item.name}{" "}
+            </span>
           </li>
         ))}
       </ul>
