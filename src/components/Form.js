@@ -18,10 +18,10 @@ inputRef.current.value = "";
 
     return (
         <div>
-            <h1>Enter a todo</h1>
+            <h1>Enter a To Do</h1>
             <form className = "form=group mt-5" onSubmit = {handleSubmit}>
             <input ref ={inputRef} className = "form-control" placeholder = "Enter text for todo"/>
-            <button type = "submit" className = "btn btn-success mt-5 mb-3">Add</button>
+            <button type = "submit" className = "btn btn-secondary mt-5 mb-3 ml-4">Add</button>
             </form>
         </div>
     )
